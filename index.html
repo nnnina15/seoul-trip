@@ -28,7 +28,7 @@
 
   .alert{margin-top:-20px;position:relative;z-index:2;background:var(--warnbg);border:1px solid #eccf9a;color:var(--warn);font-weight:700;font-size:14px;padding:14px 18px;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.08);}
 
-  .navbar{position:sticky;top:0;z-index:10;background:var(--navy);display:flex;overflow-x:auto;gap:0;margin-top:24px;border-radius:10px;}
+  .navbar{position:sticky;top: 5px;z-index:10;background:var(--navy);display:flex;overflow-x:auto;gap:0;margin-top:24px;border-radius:10px;}
   .navbar a{flex:1;text-align:center;color:#fff;text-decoration:none;padding:12px 8px;font-size:13px;font-weight:500;white-space:nowrap;border-right:1px solid rgba(255,255,255,.15);}
   .navbar a:last-child{border-right:none;}
   .navbar a:hover{background:var(--navy-dark);}
@@ -318,6 +318,8 @@
 
   <div id="food" class="section-title"><span class="badge">餐廳清單</span><h2>全部候選餐廳</h2><span class="sub">★=已排定入行程</span></div>
   <div class="subnote">★ 標示「需確認」者請出發前用 Naver Map 查當日營業狀態</div>
+  <div class="group-head">■ 在行程動線上</div>
+  <div class="card-grid col2">
   <div class="card"><div class="body"><p class="title"><span class="star">★</span> 弘益醬蟹<span class="tag">醬蟹</span><span class="tag hl">10/8 午餐</span></p><p class="meta">홍익게장 · 弘大 · ★需確認</p><p class="note">醬蟹/辣蟹/蟹湯無限續。5人務必訂位</p></div></div>
   <div class="card"><div class="body"><p class="title">真味食堂<span class="tag">醬蟹</span><span class="tag ">備選</span></p><p class="meta">진미식당 · 麻浦 · ★需確認</p><p class="note">米其林6屆，一人約5-7萬韓元，要早訂</p></div></div>
   <div class="card"><div class="body"><p class="title">普樂醬蟹<span class="tag">醬蟹</span><span class="tag ">備選</span></p><p class="meta">프로간장게장 · 新沙 · ★需確認</p><p class="note">新沙洞醬蟹一條街，米其林推薦老字號</p></div></div>
@@ -338,23 +340,28 @@
   <div class="card"><div class="body"><p class="title"><span class="star">★</span> 新堂洞年糕一條街<span class="tag">辣炒年糕</span><span class="tag hl">10/10 午餐</span></p><p class="meta">신당동 떡볶이 골목 · 新堂洞 · ★需確認</p><p class="note">發源地，鍋煮年糕，與路邊攤不同</p></div></div>
   <div class="card"><div class="body"><p class="title">廣藏市場<span class="tag">辣炒年糕/魚板</span><span class="tag ">備選</span></p><p class="meta">광장시장 · 鐘路 · 約 09:00-23:00</p><p class="note">順便吃生牛肉拌飯、綠豆煎餅、馬格利</p></div></div>
   <div class="card"><div class="body"><p class="title">無限暢食燒肉<span class="tag">烤肉</span><span class="tag ">備選</span></p><p class="meta">무한리필 고기집 · 弘大 · ★需確認</p><p class="note">一人約2萬韓元吃到飽，5人分攤最省</p></div></div>
+  </div>
   <div class="group-head">■ 不在動線上（想去要另外安排）</div>
+  <div class="card-grid col2">
   <div class="card"><div class="body"><p class="title">大世BAKMOKSAL 영등포점<span class="tag">燒肉</span><span class="tag ">選配</span></p><p class="meta">대세박목살 · 永登浦 · 영등포구 영등포로50길 9 · 平日16:00-23:00 / 假日14:00-23:00</p><p class="note">永登浦站5號出口走330m。숙성박목살(熟成豬頸肉)招牌</p></div></div>
   <div class="card"><div class="body"><p class="title">木洞牛肋排<span class="tag">燒肉</span><span class="tag ">選配</span></p><p class="meta">목동우대갈비 · 木洞 · ★需確認</p><p class="note">牛肋排燒肉。地址待現場用 Naver Map 核對</p></div></div>
   <div class="card"><div class="body"><p class="title">高豆里 龍山店<span class="tag">燒肉</span><span class="tag ">選配</span></p><p class="meta">고두리 용산점 · 龍山 · ★需確認</p><p class="note">地址待現場用 Naver Map 核對</p></div></div>
   <div class="card"><div class="body"><p class="title">First Coffee Lab 江南店<span class="tag">咖啡</span><span class="tag ">選配</span></p><p class="meta">퍼스트커피랩 강남점 · 江南 역삼동 · 강남구 역삼동 618-18 · 11:00-01:00</p><p class="note">海浪聲沉浸式主題。巴斯克乳酪蛋糕(4吋約NT$180)、費南雪</p></div></div>
   <div class="card"><div class="body"><p class="title">Eero Seoul<span class="tag">咖啡</span><span class="tag ">選配</span></p><p class="meta">카페 이로 · 瑞草 · 서초구 반포대로30길 32, 1F/B1 · 平日12:00-20:20 / 週末11:00-21:30</p><p class="note">獬豸神獸主題，室內雨聲裝置+黑色倒影水池。無停車位</p></div></div>
   <div class="card"><div class="body"><p class="title">濟州屋塔 黑BBQ<span class="tag">烤肉</span><span class="tag ">選配</span></p><p class="meta">제주옥탑 블랙BBQ · 狎鷗亭羅德奧站 5號出口步行6分 · 11:00-02:00 (15-16休息)</p><p class="note">濟州黑豬洞穴烤肉，全程專人代烤。TWICE/BTS/SEVENTEEN/aespa都去過</p></div></div>
+  </div>
 
   <div id="tools" class="section-title"><span class="badge">旅遊工具</span><h2>APP／支付／行李／退稅</h2></div>
   <div class="subnote">★ 有時效性的優惠請出發前再確認一次，活動常常換</div>
   <div class="group-head">■ 入境（★這區最重要，做錯會卡關）</div>
+  <div class="card-grid col2">
   <div class="card"><div class="body"><p class="title">e-Arrival Card 電子入境申報 (起飛前3天內完成)<span class="tag warn">★★★ 必做</span></p><p class="note">紙本入境卡（小黃卡）自 2026/1/1 已全面廢除，現在是強制線上申報。台灣人免 K-ETA，所以一定要填這個。抵達前 72 小時內提交，送出後 72 小時有效</p><p class="meta">www.e-arrivalcard.go.kr｜有辦 SeS 自動通關者可免填</p></div></div>
   <div class="card"><div class="body"><p class="title">SeS 自動通關（Smart Entry Service）<span class="tag ">★ 加分</span></p><p class="note">仁川機場、首爾市區都能辦，入境出境都能自動通關。辦了就不用填 e-Arrival Card</p><p class="meta">一次辦終身有效，常來韓國很划算</p></div></div>
   <div class="card"><div class="body"><p class="title">SMARTPASS（出境用）<span class="tag ">★ 加分</span></p><p class="note">在家先申請，出境時掃臉快速通關。記得先綁登機證。人工掃護照晶片常常掃不過，這招 5 秒解決</p><p class="meta">回程 10/10 連假機場很擠，這個省很多時間</p></div></div>
-  <div class="card"><div class="body"><p class="title">K-ETA<span class="tag ">入境</span></p><p class="note">台灣護照免申請延長至 2026/12/31</p><p class="meta">不用弄</p></div></div>
   <div class="card"><div class="body"><p class="title">藥品管制<span class="tag warn">★★ 重要</span></p><p class="note">韓國有管制藥物，不要隨便帶藥入境。常見感冒藥、止痛藥的某些成分在韓國屬管制，別憑經驗判斷</p><p class="meta">要帶就查成分，帶原包裝或處方箋</p></div></div>
+  </div>
   <div class="group-head">■ 交通與支付</div>
+  <div class="card-grid col2">
   <div class="card"><div class="body"><p class="title">Apple Pay 綁 T-money（iPhone 可直接刷地鐵）<span class="tag ">★ 新規</span></p><p class="note">2026/3 起開放外國旅客。iOS 17.2+ 在錢包加「交通卡」即可，開啟快速交通卡模式就能免解鎖感應。不用再買實體卡</p><p class="meta">★儲值只支援 Mastercard / Amex / UnionPay，Visa 尚未支援。只支援預付型 T-money</p></div></div>
   <div class="card"><div class="body"><p class="title">實體 T-money 卡<span class="tag ">備案</span></p><p class="note">若是 Android 或只有 Visa 卡，還是買實體卡，便利商店就有</p><p class="meta">別買觀光交通券，不划算</p></div></div>
   <div class="card"><div class="body"><p class="title">WOWPASS<span class="tag ">交通/支付</span></p><p class="note">機台可現場換韓元 + 當交通卡。明洞大使館匯率略好一點，但差距不大（都 45.xx 上下）</p><p class="meta">換不多的話用機台最省事；要換大額再去大使館</p></div></div>
@@ -362,7 +369,9 @@
   <div class="card"><div class="body"><p class="title">樂天百貨 LOTTE TOURIST 會員卡<span class="tag ">★ 省錢</span></p><p class="note">外國遊客可辦。消費滿 10 萬韓元享 5% 折扣（30天內限用3次，單次折扣上限10萬韓元）；黑卡等級再折5%。現金/境外信用卡/支付寶/微信/台灣LINE Pay 都可用</p><p class="meta">★適用 Matin Kim、Stand Oil、Marithé、Mardi 等韓牌｜⚠只在 B1-8F 百貨總店適用，9-12F 免稅店是另一系統要另外辦｜辦卡帶護照到指定客服中心</p></div></div>
   <div class="card"><div class="body"><p class="title">MONEYPLANET 換錢所<span class="tag ">換錢</span></p><p class="note">明洞商圈內（EDIYA COFFEE 附近）。免手續費、有中文服務，社群評價「明洞最划算」之一</p><p class="meta">★跟大使館前換錢所、一品香三家比價再換</p></div></div>
   <div class="card"><div class="body"><p class="title">Check in Seoul 儲值優惠可能已過期<span class="tag ">★ 注意</span></p><p class="note">「充值10萬送1萬」寫到 5/31，現在是 8 月，該檔應已結束。出發前上官網看有無新檔</p><p class="meta">別為了過期活動先儲太多值</p></div></div>
+  </div>
   <div class="group-head">■ 必載 APP</div>
+  <div class="card-grid col2">
   <div class="card"><div class="body"><p class="title">NAVER Map<span class="tag ">地圖</span></p><p class="note">韓國導航一定要用這個，Google Map 在韓國不準</p><p class="meta">必載</p></div></div>
   <div class="card"><div class="body"><p class="title">韓巢 HANCHAO 韓國地圖<span class="tag ">地圖</span></p><p class="note">中文介面的韓國地圖，看不懂韓文時的救星</p><p class="meta">中文友善</p></div></div>
   <div class="card"><div class="body"><p class="title">Subway（지하철）<span class="tag ">地鐵</span></p><p class="note">地鐵路線圖有中文，轉乘、末班車時間一目了然</p><p class="meta">必載</p></div></div>
@@ -378,29 +387,36 @@
   <div class="card"><div class="body"><p class="title">Olive Young App<span class="tag ">美妝</span></p><p class="note">新客折價券 + 會員價，結帳掃條碼，有中文介面</p><p class="meta">★10/10 掃貨前先載</p></div></div>
   <div class="card"><div class="body"><p class="title">WaySim eSIM<span class="tag ">網路</span></p><p class="note">折扣碼 y314 最高 88 折，含 1GB 備援 eSIM</p><p class="meta">bit.ly/3ZDb61z（優惠出發前再確認）</p></div></div>
   <div class="card"><div class="body"><p class="title">韓國觀光局折價券<span class="tag ">優惠</span></p><p class="note">線上註冊後折價券寄到 Email，首爾 Olive Young 有人成功使用</p><p class="meta">zhifeiquhanguo.com/cht（依現場活動為主）</p></div></div>
+  </div>
   <div class="group-head">■ 行李配置（每人依自己機票額度確認）</div>
+  <div class="card-grid col2">
   <div class="card"><div class="body"><p class="title">手提額度 + 托運額度（各自確認）<span class="tag ">去程</span></p><p class="note">去程盡量輕裝，行李箱留半空</p><p class="meta">★去程行李箱留半空，回程才裝得下</p></div></div>
   <div class="card"><div class="body"><p class="title">手提額度 + 托運額度（各自確認）<span class="tag ">回程</span></p><p class="note">★若回程托運額度比去程多，多出來的就是購物空間。訂票時可加購</p><p class="meta">回程通常買最多，額度要留夠</p></div></div>
   <div class="card"><div class="body"><p class="title">液體/化妝品可托運<span class="tag ">★ 好消息</span></p><p class="note">有托運額度的話，化妝水、精華液、噴霧都能放托運，最後一天買才安全</p><p class="meta">手提仍受 100ml 限制，大罐一律丟托運</p></div></div>
   <div class="card"><div class="body"><p class="title">手提額度很快就滿<span class="tag ">★ 注意</span></p><p class="note">行動電源、相機、貴重品、易碎品必須手提，這些先佔掉重量。衣物盡量放托運</p><p class="meta">液體超過100ml千萬別放手提，過安檢會被丟</p></div></div>
   <div class="card"><div class="body"><p class="title">帶一個摺疊袋 / 空的軟行李袋<span class="tag ">建議</span></p><p class="note">回程東西一定變多，去程帶個摺疊袋最保險</p><p class="meta">或去程直接帶兩個箱子，一個空的</p></div></div>
   <div class="card"><div class="body"><p class="title">秤重<span class="tag ">建議</span></p><p class="note">托運超重罰款很貴，回飯店前先分裝好</p><p class="meta">帶個行李秤或用飯店的</p></div></div>
+  </div>
   <div class="group-head">■ 電器與危險品</div>
+  <div class="card-grid col2">
   <div class="card"><div class="body"><p class="title">行動電源（依 Wh 分級）<span class="tag ">★ 規定</span></p><p class="note">必須有標示 Wh 才一定能帶。100Wh 以下：自由攜帶，數量依航空公司規定｜100-160Wh：需向航空公司申請，每人最多 2 個｜160Wh 以上：禁止攜帶</p><p class="meta">★只能放隨身行李，不可托運。充電口貼絕緣膠帶 + 放夾鏈袋</p></div></div>
   <div class="card"><div class="body"><p class="title">轉接頭<span class="tag ">必帶</span></p><p class="note">韓國 220V 圓形兩孔 C/F 型，台灣扁插插不進去</p><p class="meta">飯店「基本上」可以借，但別賭</p></div></div>
   <div class="card"><div class="body"><p class="title">液體 / 化妝品<span class="tag ">行李規定</span></p><p class="note">超過 100ml 一律托運，手提會被丟</p><p class="meta">先確認自己的票含不含托運</p></div></div>
+  </div>
   <div class="group-head">■ 退稅</div>
+  <div class="card-grid col2">
   <div class="card"><div class="body"><p class="title">即時退稅門檻<span class="tag ">退稅</span></p><p class="note">單筆滿 3 萬韓元多可現場即時退稅，結帳時說「택스리펀 되나요」</p><p class="meta">護照正本一定要隨身</p></div></div>
   <div class="card"><div class="body"><p class="title">5人結帳策略<span class="tag ">退稅</span></p><p class="note">分開結帳容易達不到門檻，集中 1-2 本護照結大單退更多</p><p class="meta">CHAAKAN、Olive Young 都是退稅店</p></div></div>
+  </div>
 
   <div id="info" class="section-title"><span class="badge">實用資訊</span><h2>行前準備重點</h2></div>
-  <div class="info-grid">
-    <div class="info-card"><h3>入境</h3><p>紙本入境卡已廢除，強制填 e-Arrival Card（抵達前72小時內）。台灣護照免 K-ETA。</p></div>
-    <div class="info-card"><h3>交通</h3><p>iPhone 可綁 Apple Pay T-money 直接刷地鐵（Visa 尚不支援儲值）。抵達日建議 Kakao T 叫車。</p></div>
-    <div class="info-card"><h3>退稅</h3><p>單筆滿 3 萬韓元可現場即時退稅，5人集中1-2本護照結大單更划算。</p></div>
-    <div class="info-card"><h3>App 必載</h3><p>Naver Map、Papago、CATCH TABLE、Kakao T、Olive Young App。</p></div>
-    <div class="info-card"><h3>行李</h3><p>液體/化妝品超過100ml一律托運，確認機票托運額度。行動電源依 Wh 分級，只能手提。</p></div>
-    <div class="info-card"><h3>訂位</h3><p>5人連假訂位吃緊，弘益醬蟹、王妃家、朝朝刀削麵建議提前用 CATCH TABLE 訂。</p></div>
+  <div class="card-grid col2">
+    <div class="card"><div class="body"><p class="title">入境</p><p class="note">紙本入境卡已廢除，強制填 e-Arrival Card（抵達前72小時內）。台灣護照免 K-ETA。</p></div></div>
+    <div class="card"><div class="body"><p class="title">交通</p><p class="note">iPhone 可綁 Apple Pay T-money 直接刷地鐵（Visa 尚不支援儲值）。抵達日建議 Kakao T 叫車。</p></div></div>
+    <div class="card"><div class="body"><p class="title">退稅</p><p class="note">單筆滿 3 萬韓元可現場即時退稅，5人集中1-2本護照結大單更划算。</p></div></div>
+    <div class="card"><div class="body"><p class="title">App 必載</p><p class="note">Naver Map、Papago、CATCH TABLE、Kakao T、Olive Young App。</p></div></div>
+    <div class="card"><div class="body"><p class="title">行李</p><p class="note">液體/化妝品超過100ml一律托運，確認機票托運額度。行動電源依 Wh 分級，只能手提。</p></div></div>
+    <div class="card"><div class="body"><p class="title">訂位</p><p class="note">5人連假訂位吃緊，弘益醬蟹、王妃家、朝朝刀削麵建議提前用 CATCH TABLE 訂。</p></div></div>
   </div>
 
   <div class="chips">

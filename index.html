@@ -98,6 +98,13 @@
   details.accordion[open] summary{border-radius:8px 8px 0 0;margin-bottom: 10px;}
   details.accordion .card-grid{margin-top:10px;}
   .cl-group-title{font-weight:700;color:var(--navy);font-size:13px;padding:7px 12px;background:#eceadf;border-radius:8px;margin:12px 0 8px;}
+  .cost-table{width:100%;border-collapse:collapse;margin-bottom:16px;font-size:14px;}
+  .cost-table th,.cost-table td{padding:10px 12px;border-bottom:1px solid var(--line);}
+  .cost-table th{background:#eceadf;color:var(--navy);font-weight:700;font-size:13px;}
+  .cost-table td:last-child,.cost-table th:last-child{text-align:right;}
+  .cost-table tfoot tr:first-child td{border-top:2px solid var(--navy);font-weight:700;background:#f5f3ec;}
+  .cost-table tfoot tr:last-child td{font-weight:900;background:var(--navy);color:#fff;border-radius:0;}
+  .cost-sum{font-size:22px;font-weight:900;color:var(--navy);}
   .card-grid{display:grid;gap:10px;margin-bottom:16px;}
   .card-grid.col3{grid-template-columns:repeat(3,1fr);}
   .card-grid.col2{grid-template-columns:repeat(2,1fr);}
@@ -134,6 +141,7 @@
     <a href="#food">餐廳清單</a>
     <a href="#tools">旅遊工具</a>
     <a href="#info">實用資訊</a>
+    <a href="#cost">花費</a>
   </div>
 
   <div id="checklist" class="section-title"><span class="badge">Checklist</span><h2>行前準備清單</h2></div>
@@ -398,6 +406,31 @@
   <div class="chips">
     <span class="chip hl">購物清單／預算表請見共用 Google 試算表</span>
   </div>
+
+  <div id="cost" class="section-title"><span class="badge">花費</span><h2>已花費記錄</h2></div>
+  <div class="subnote">所有金額 TWD · 自動計算總計與每人分攤（÷5）</div>
+  <table class="cost-table">
+    <thead>
+      <tr><th>日期</th><th>項目</th><th>金額 (TWD)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>07/31</td><td>機票 酷航 TR872</td><td class="amt">17326</td></tr>
+      <tr><td>07/31</td><td>機票 酷航 TR872</td><td class="amt">28809</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="2">總計</td><td id="cost-total">—</td></tr>
+      <tr><td colspan="2">每人（÷5）</td><td id="cost-per">—</td></tr>
+    </tfoot>
+  </table>
+  <script>
+    (function(){
+      var amts=document.querySelectorAll('.amt');
+      var total=0;
+      amts.forEach(function(el){total+=parseInt(el.textContent.replace(/,/g,''));});
+      document.getElementById('cost-total').textContent=total.toLocaleString();
+      document.getElementById('cost-per').textContent=Math.round(total/5).toLocaleString();
+    })();
+  </script>
 
   <footer>圖片來源：Wikimedia Commons（依 CC 授權）。地址與營業時間以出發前 Naver Map 查詢為準。</footer>
 </div>

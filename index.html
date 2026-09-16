@@ -1,131 +1,1015 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" data-palette="blush">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>首爾 5天4夜行程 | 2026.10.06-10</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&family=Bodoni+Moda:opsz,wght@6..96,700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#7B3E56" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171216" media="(prefers-color-scheme: dark)">
+<meta name="description" content="首爾 5天4夜自由行完整行程：2026/10/06–10/10，購物、美食、夜生活與行前準備清單。">
 <style>
+  /* ============ 設計代幣 ============ */
   :root{
-    --navy:#1f3864; --navy-dark:#132244; --gold:#c9a24b;
-    --bg:#f4f2ec; --card:#ffffff; --line:#e4e0d3; --text:#2c2c2a; --muted:#6b6a63;
-    --warn:#c00000; --warnbg:#fdf1e6;
+    --brand:#7B3E56; --brand-dark:#5A2B3E; --brand-soft:#A05A76;
+    --accent:#C8839C; --accent-soft:#F5DAE3; --accent-wash:#FDF4F7;
+    --bg:#F9F5F6; --bg-deep:#F1E7EB;
+    --card:#FFFFFF; --card-2:#FDF9FA;
+    --line:#EADCE2; --line-soft:#F5ECF0;
+    --text:#2E2429; --muted:#6B5D65;
+    --warn:#B8332F; --warnbg:#FBEDEC; --warnline:#EFC7C4;
+    --amber:#A9701C;
+    --brand-rgb:123,62,86; --accent-rgb:200,131,156; --shade-rgb:46,24,34; --on-accent:#33151F;
+
+    --r-sm:8px; --r-md:12px; --r-lg:18px; --r-xl:26px; --r-pill:999px;
+    --sh-1:0 1px 2px rgba(var(--shade-rgb),.05), 0 2px 8px -4px rgba(var(--shade-rgb),.08);
+    --sh-2:0 2px 4px rgba(var(--shade-rgb),.05), 0 12px 28px -14px rgba(var(--shade-rgb),.2);
+    --sh-3:0 18px 50px -22px rgba(var(--shade-rgb),.4);
+    --nav-h:74px;
+    --ease:cubic-bezier(.22,.8,.3,1);
+    --sans:"Noto Sans TC",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --serif:"Noto Serif TC",Georgia,"Songti TC",serif;
+    --display:"Bodoni Moda",Georgia,serif;
   }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --brand:#E8A8BE; --brand-dark:#F6D5E0; --brand-soft:#C9849E;
+      --accent:#D896AC; --accent-soft:#4A2E3A; --accent-wash:#241A1E;
+      --bg:#171216; --bg-deep:#110D10;
+      --card:#1F1920; --card-2:#261F27;
+      --line:#382B33; --line-soft:#2B2128;
+      --text:#EDE5E9; --muted:#A798A0;
+      --warn:#FF9080; --warnbg:#2C1517; --warnline:#4D2830;
+      --amber:#E3A55D;
+      --brand-rgb:232,168,190; --accent-rgb:216,150,172; --shade-rgb:0,0,0; --on-accent:#171216;
+      --sh-1:0 1px 2px rgba(0,0,0,.4);
+      --sh-2:0 2px 6px rgba(0,0,0,.4), 0 14px 30px -16px rgba(0,0,0,.7);
+      --sh-3:0 18px 50px -22px rgba(0,0,0,.8);
+    }
+  }
+
+  /* ============ 可切換色盤 ============ */
+  :root[data-palette="blush"]{ /* 粉霧 */
+    --brand:#7B3E56;
+    --brand-dark:#5A2B3E;
+    --brand-soft:#A05A76;
+    --accent:#C8839C;
+    --accent-soft:#F5DAE3;
+    --accent-wash:#FDF4F7;
+    --bg:#F9F5F6;
+    --bg-deep:#F1E7EB;
+    --card:#FFFFFF;
+    --card-2:#FDF9FA;
+    --line:#EADCE2;
+    --line-soft:#F5ECF0;
+    --text:#2E2429;
+    --muted:#6B5D65;
+    --warn:#B8332F;
+    --warnbg:#FBEDEC;
+    --warnline:#EFC7C4;
+    --amber:#A9701C;
+    --brand-rgb:123,62,86;
+    --accent-rgb:200,131,156;
+    --shade-rgb:46,24,34;
+    --on-accent:#33151F;
+    --on-brand:#FFFFFF;
+    --bar:#7B3E56;
+    --bar-2:#56283A;
+    --on-bar:#FDF3F7;
+    --on-bar-dim:rgba(250,235,242,.88);
+    --pill-bg:#F7DEE8;
+    --pill-fg:#6B3349;
+    --cool:#4E6A7E;
+    --cool-2:#3A5061;
+    --on-cool:#F2F8FB;
+  }
+  :root[data-palette="greige"]{ /* 奶杏 */
+    --brand:#64535A;
+    --brand-dark:#483B41;
+    --brand-soft:#8A7780;
+    --accent:#C4A79A;
+    --accent-soft:#EDE0D9;
+    --accent-wash:#FBF6F3;
+    --bg:#F5F1F4;
+    --bg-deep:#EAE3E8;
+    --card:#FFFFFF;
+    --card-2:#FBF7F9;
+    --line:#E5DCE1;
+    --line-soft:#F2ECEF;
+    --text:#2C2629;
+    --muted:#685E64;
+    --warn:#B8332F;
+    --warnbg:#FBEDEC;
+    --warnline:#EFC7C4;
+    --amber:#A9701C;
+    --brand-rgb:100,83,90;
+    --accent-rgb:196,167,154;
+    --shade-rgb:44,34,40;
+    --on-accent:#32241E;
+    --on-brand:#FFFFFF;
+    --bar:#64535A;
+    --bar-2:#453840;
+    --on-bar:#F8F3F6;
+    --on-bar-dim:rgba(246,238,243,.88);
+    --pill-bg:#EFE3DC;
+    --pill-fg:#57474E;
+    --cool:#615B7A;
+    --cool-2:#48435E;
+    --on-cool:#F2F0F8;
+  }
+  :root[data-palette="teal"]{ /* 青珊瑚 */
+    --brand:#1F5661;
+    --brand-dark:#123840;
+    --brand-soft:#327A87;
+    --accent:#E2714E;
+    --accent-soft:#F8D9CC;
+    --accent-wash:#FFF5F0;
+    --bg:#F4F3EF;
+    --bg-deep:#E8E6DF;
+    --card:#FFFFFF;
+    --card-2:#FAF9F6;
+    --line:#DDDBD3;
+    --line-soft:#EDEBE5;
+    --text:#232725;
+    --muted:#61676A;
+    --warn:#B33A24;
+    --warnbg:#FCEEEA;
+    --warnline:#F0C9BC;
+    --amber:#B5751A;
+    --brand-rgb:31,86,97;
+    --accent-rgb:226,113,78;
+    --shade-rgb:12,32,36;
+    --on-accent:#3A1A0E;
+    --on-brand:#FFFFFF;
+    --bar:#1F5661;
+    --bar-2:#123840;
+    --on-bar:#F1F8F8;
+    --on-bar-dim:rgba(236,247,247,.88);
+    --pill-bg:#E2714E;
+    --pill-fg:#33160B;
+    --cool:#1F5661;
+    --cool-2:#123840;
+    --on-cool:#F1F8F8;
+  }
+  :root[data-palette="autumn"]{ /* 秋楓 */
+    --brand:#9C3D2E;
+    --brand-dark:#6E2A20;
+    --brand-soft:#B75A46;
+    --accent:#C4884A;
+    --accent-soft:#EDD9BC;
+    --accent-wash:#FDF6EC;
+    --bg:#FAF6EF;
+    --bg-deep:#F2EBDF;
+    --card:#FFFFFF;
+    --card-2:#FCF8F2;
+    --line:#E8DDCC;
+    --line-soft:#F1E9DB;
+    --text:#2E2724;
+    --muted:#6E645C;
+    --warn:#C22B1F;
+    --warnbg:#FDECE7;
+    --warnline:#F2C4B6;
+    --amber:#C9721A;
+    --brand-rgb:156,61,46;
+    --accent-rgb:196,136,74;
+    --shade-rgb:48,26,17;
+    --on-accent:#3B2717;
+    --on-brand:#FFFFFF;
+    --bar:#9C3D2E;
+    --bar-2:#6E2A20;
+    --on-bar:#FFF6EE;
+    --on-bar-dim:rgba(255,246,238,.90);
+    --pill-bg:#FFF4E4;
+    --pill-fg:#8A3323;
+    --cool:#9C3D2E;
+    --cool-2:#6E2A20;
+    --on-cool:#FFF6EE;
+  }
+  :root[data-palette="mist"]{ /* 霧灰藍 */
+    --brand:#42566B;
+    --brand-dark:#2C3B4A;
+    --brand-soft:#5D7488;
+    --accent:#B08E5E;
+    --accent-soft:#E6DAC6;
+    --accent-wash:#FAF7F1;
+    --bg:#F5F4F2;
+    --bg-deep:#EAE8E4;
+    --card:#FFFFFF;
+    --card-2:#FAF9F7;
+    --line:#DFDCD7;
+    --line-soft:#EDEBE7;
+    --text:#22262B;
+    --muted:#63686F;
+    --warn:#BE3A2C;
+    --warnbg:#FBEDEB;
+    --warnline:#EFC6BF;
+    --amber:#A8721A;
+    --brand-rgb:66,86,107;
+    --accent-rgb:176,142,94;
+    --shade-rgb:20,28,36;
+    --on-accent:#20252B;
+    --on-brand:#FFFFFF;
+    --bar:#42566B;
+    --bar-2:#2A3745;
+    --on-bar:#F4F7FA;
+    --on-bar-dim:rgba(236,242,247,.76);
+    --pill-bg:#F7F4EC;
+    --pill-fg:#354657;
+    --cool:#42566B;
+    --cool-2:#2A3745;
+    --on-cool:#F4F7FA;
+  }
+  :root[data-palette="pine"]{ /* 松墨綠 */
+    --brand:#2F4F45;
+    --brand-dark:#1E362E;
+    --brand-soft:#4A6D61;
+    --accent:#B8985A;
+    --accent-soft:#E7DCC0;
+    --accent-wash:#F9F6EC;
+    --bg:#F5F3EC;
+    --bg-deep:#EAE6DA;
+    --card:#FFFFFF;
+    --card-2:#FAF8F2;
+    --line:#DEDACB;
+    --line-soft:#EDE9DE;
+    --text:#232925;
+    --muted:#62685F;
+    --warn:#BF3A2B;
+    --warnbg:#FBEDE9;
+    --warnline:#EEC5B9;
+    --amber:#AE7419;
+    --brand-rgb:47,79,69;
+    --accent-rgb:184,152,90;
+    --shade-rgb:16,30,25;
+    --on-accent:#1E2A23;
+    --on-brand:#FFFFFF;
+    --bar:#2F4F45;
+    --bar-2:#1B332B;
+    --on-bar:#F2F8F4;
+    --on-bar-dim:rgba(230,242,236,.76);
+    --pill-bg:#F6F2E4;
+    --pill-fg:#27443B;
+    --cool:#2F4F45;
+    --cool-2:#1B332B;
+    --on-cool:#F2F8F4;
+  }
+  :root[data-palette="milktea"]{ /* 奶茶棕 */
+    --brand:#6B5344;
+    --brand-dark:#4A382D;
+    --brand-soft:#8A6E5B;
+    --accent:#C9A87C;
+    --accent-soft:#EDE0CC;
+    --accent-wash:#FBF7F0;
+    --bg:#F7F2EA;
+    --bg-deep:#EDE5D8;
+    --card:#FFFFFF;
+    --card-2:#FCF9F4;
+    --line:#E4DBCB;
+    --line-soft:#F0EAE0;
+    --text:#2B2520;
+    --muted:#6A5F57;
+    --warn:#BE3A2C;
+    --warnbg:#FBEDEA;
+    --warnline:#EFC8BE;
+    --amber:#B0731F;
+    --brand-rgb:107,83,68;
+    --accent-rgb:201,168,124;
+    --shade-rgb:43,31,23;
+    --on-accent:#3A2C20;
+    --on-brand:#FFFFFF;
+    --bar:#6B5344;
+    --bar-2:#46352B;
+    --on-bar:#FBF6EF;
+    --on-bar-dim:rgba(251,246,239,.88);
+    --pill-bg:#FBF3E6;
+    --pill-fg:#5B4437;
+    --cool:#6B5344;
+    --cool-2:#46352B;
+    --on-cool:#FBF6EF;
+  }
+  :root[data-palette="navy"]{ /* 原深藍 */
+    --brand:#1F3864;
+    --brand-dark:#132244;
+    --brand-soft:#2F4D7D;
+    --accent:#C9A24B;
+    --accent-soft:#E8D9B4;
+    --accent-wash:#FAF4E6;
+    --bg:#F4F2EC;
+    --bg-deep:#E9E6DC;
+    --card:#FFFFFF;
+    --card-2:#FBFAF6;
+    --line:#E0DCCF;
+    --line-soft:#EEEBE2;
+    --text:#25272D;
+    --muted:#63666D;
+    --warn:#BE3A2C;
+    --warnbg:#FBEDEB;
+    --warnline:#EFC8BE;
+    --amber:#B07A18;
+    --brand-rgb:31,56,100;
+    --accent-rgb:201,162,75;
+    --shade-rgb:18,28,48;
+    --on-accent:#1E2637;
+    --on-brand:#FFFFFF;
+    --bar:#1F3864;
+    --bar-2:#122142;
+    --on-bar:#F2F5FA;
+    --on-bar-dim:rgba(232,238,248,.76);
+    --pill-bg:#F7F1DF;
+    --pill-fg:#1B3159;
+    --cool:#1F3864;
+    --cool-2:#122142;
+    --on-cool:#F2F5FA;
+  }
+  @media (prefers-color-scheme:dark){
+    :root[data-palette="blush"]:not([data-theme="light"]){ /* 粉霧 */
+      --brand:#E8A8BE;
+      --brand-dark:#F6D5E0;
+      --brand-soft:#C9849E;
+      --accent:#D896AC;
+      --accent-soft:#4A2E3A;
+      --accent-wash:#241A1E;
+      --bg:#171216;
+      --bg-deep:#110D10;
+      --card:#1F1920;
+      --card-2:#261F27;
+      --line:#382B33;
+      --line-soft:#2B2128;
+      --text:#EDE5E9;
+      --muted:#A798A0;
+      --warn:#FF9080;
+      --warnbg:#2C1517;
+      --warnline:#4D2830;
+      --amber:#E3A55D;
+      --brand-rgb:232,168,190;
+      --accent-rgb:216,150,172;
+      --shade-rgb:0,0,0;
+      --on-accent:#171216;
+      --on-brand:#171216;
+      --bar:#3D2833;
+      --bar-2:#251821;
+      --on-bar:#F6D5E0;
+      --on-bar-dim:rgba(246,213,224,.82);
+      --pill-bg:#E8A8BE;
+      --pill-fg:#171216;
+      --cool:#35505F;
+      --cool-2:#22333E;
+      --on-cool:#CFE0EA;
+    }
+    :root[data-palette="greige"]:not([data-theme="light"]){ /* 奶杏 */
+      --brand:#D9BFC8;
+      --brand-dark:#EEDCE3;
+      --brand-soft:#B49BA6;
+      --accent:#C9AC9E;
+      --accent-soft:#463A34;
+      --accent-wash:#211C1E;
+      --bg:#161316;
+      --bg-deep:#100E10;
+      --card:#1E1A1D;
+      --card-2:#252024;
+      --line:#352E33;
+      --line-soft:#282226;
+      --text:#EBE5E8;
+      --muted:#A59BA1;
+      --warn:#FF9080;
+      --warnbg:#2A1618;
+      --warnline:#4A2A2E;
+      --amber:#E3A55D;
+      --brand-rgb:217,191,200;
+      --accent-rgb:201,172,158;
+      --shade-rgb:0,0,0;
+      --on-accent:#161316;
+      --on-brand:#161316;
+      --bar:#3A3037;
+      --bar-2:#241E23;
+      --on-bar:#EEDCE3;
+      --on-bar-dim:rgba(238,220,227,.82);
+      --pill-bg:#D9BFC8;
+      --pill-fg:#161316;
+      --cool:#453F5A;
+      --cool-2:#2C2839;
+      --on-cool:#DAD5EC;
+    }
+    :root[data-palette="teal"]:not([data-theme="light"]){ /* 青珊瑚 */
+      --brand:#7FC6D0;
+      --brand-dark:#C3E6EB;
+      --brand-soft:#5FA3AE;
+      --accent:#F08A63;
+      --accent-soft:#4A2B1E;
+      --accent-wash:#1C1714;
+      --bg:#0D1315;
+      --bg-deep:#090E10;
+      --card:#141C1E;
+      --card-2:#1A2426;
+      --line:#263234;
+      --line-soft:#1E2729;
+      --text:#E5EAEA;
+      --muted:#94A0A1;
+      --warn:#FF9080;
+      --warnbg:#241614;
+      --warnline:#452824;
+      --amber:#E0A44A;
+      --brand-rgb:127,198,208;
+      --accent-rgb:240,138,99;
+      --shade-rgb:0,0,0;
+      --on-accent:#1C1005;
+      --on-brand:#0D1315;
+      --bar:#1A3237;
+      --bar-2:#0F2024;
+      --on-bar:#C3E6EB;
+      --on-bar-dim:rgba(195,230,235,.82);
+      --pill-bg:#F08A63;
+      --pill-fg:#1C1005;
+      --cool:#1A3237;
+      --cool-2:#0F2024;
+      --on-cool:#C3E6EB;
+    }
+    :root[data-palette="autumn"]:not([data-theme="light"]){ /* 秋楓 */
+      --brand:#E8A08C;
+      --brand-dark:#F5D2C5;
+      --brand-soft:#D4876F;
+      --accent:#DCA86A;
+      --accent-soft:#4A3722;
+      --accent-wash:#241C14;
+      --bg:#16100D;
+      --bg-deep:#100C0A;
+      --card:#201814;
+      --card-2:#271D18;
+      --line:#3A2C23;
+      --line-soft:#2B211B;
+      --text:#EDE6E0;
+      --muted:#A99C93;
+      --warn:#FF9080;
+      --warnbg:#2C1512;
+      --warnline:#4D2820;
+      --amber:#E8A34A;
+      --brand-rgb:232,160,140;
+      --accent-rgb:220,168,106;
+      --shade-rgb:0,0,0;
+      --on-accent:#16100D;
+      --on-brand:#16100D;
+      --bar:#3A241C;
+      --bar-2:#241611;
+      --on-bar:#F5D2C5;
+      --on-bar-dim:rgba(245,210,197,.72);
+      --pill-bg:#E8A08C;
+      --pill-fg:#16100D;
+      --cool:#3A241C;
+      --cool-2:#241611;
+      --on-cool:#F5D2C5;
+    }
+    :root[data-palette="mist"]:not([data-theme="light"]){ /* 霧灰藍 */
+      --brand:#9DB8D0;
+      --brand-dark:#D3E1EE;
+      --brand-soft:#7E9AB4;
+      --accent:#D4B584;
+      --accent-soft:#3E3626;
+      --accent-wash:#1B1E22;
+      --bg:#0F1318;
+      --bg-deep:#0A0D11;
+      --card:#171C22;
+      --card-2:#1D232A;
+      --line:#2C343D;
+      --line-soft:#20272E;
+      --text:#E6E9ED;
+      --muted:#98A2AD;
+      --warn:#FF9184;
+      --warnbg:#241618;
+      --warnline:#472A28;
+      --amber:#E0A44A;
+      --brand-rgb:157,184,208;
+      --accent-rgb:212,181,132;
+      --shade-rgb:0,0,0;
+      --on-accent:#10141A;
+      --on-brand:#10141A;
+      --bar:#25303C;
+      --bar-2:#161D25;
+      --on-bar:#D3E1EE;
+      --on-bar-dim:rgba(211,225,238,.72);
+      --pill-bg:#9DB8D0;
+      --pill-fg:#10141A;
+      --cool:#25303C;
+      --cool-2:#161D25;
+      --on-cool:#D3E1EE;
+    }
+    :root[data-palette="pine"]:not([data-theme="light"]){ /* 松墨綠 */
+      --brand:#8FBCA8;
+      --brand-dark:#CBE5DA;
+      --brand-soft:#6F9C89;
+      --accent:#CFB176;
+      --accent-soft:#3A3423;
+      --accent-wash:#161A17;
+      --bg:#0E1411;
+      --bg-deep:#0A0F0C;
+      --card:#161D19;
+      --card-2:#1C2420;
+      --line:#28332D;
+      --line-soft:#1F2823;
+      --text:#E5EAE6;
+      --muted:#96A19A;
+      --warn:#FF9284;
+      --warnbg:#201614;
+      --warnline:#402824;
+      --amber:#DFA44C;
+      --brand-rgb:143,188,168;
+      --accent-rgb:207,177,118;
+      --shade-rgb:0,0,0;
+      --on-accent:#0E1411;
+      --on-brand:#0E1411;
+      --bar:#1F332C;
+      --bar-2:#12201B;
+      --on-bar:#CBE5DA;
+      --on-bar-dim:rgba(203,229,218,.72);
+      --pill-bg:#8FBCA8;
+      --pill-fg:#0E1411;
+      --cool:#1F332C;
+      --cool-2:#12201B;
+      --on-cool:#CBE5DA;
+    }
+    :root[data-palette="milktea"]:not([data-theme="light"]){ /* 奶茶棕 */
+      --brand:#D9B99A;
+      --brand-dark:#F0DDC9;
+      --brand-soft:#B9967A;
+      --accent:#D9B98A;
+      --accent-soft:#433727;
+      --accent-wash:#1F1A15;
+      --bg:#151110;
+      --bg-deep:#0F0C0B;
+      --card:#1E1A17;
+      --card-2:#25201C;
+      --line:#352D26;
+      --line-soft:#28221D;
+      --text:#EDE6DE;
+      --muted:#A69B90;
+      --warn:#FF9484;
+      --warnbg:#261715;
+      --warnline:#48291F;
+      --amber:#E3A54D;
+      --brand-rgb:217,185,154;
+      --accent-rgb:217,185,138;
+      --shade-rgb:0,0,0;
+      --on-accent:#171210;
+      --on-brand:#171210;
+      --bar:#33291F;
+      --bar-2:#1F1813;
+      --on-bar:#F0DDC9;
+      --on-bar-dim:rgba(240,221,201,.72);
+      --pill-bg:#D9B99A;
+      --pill-fg:#171210;
+      --cool:#33291F;
+      --cool-2:#1F1813;
+      --on-cool:#F0DDC9;
+    }
+    :root[data-palette="navy"]:not([data-theme="light"]){ /* 原深藍 */
+      --brand:#8FB3E8;
+      --brand-dark:#CFDFF7;
+      --brand-soft:#7A9DD3;
+      --accent:#D6B26A;
+      --accent-soft:#463C22;
+      --accent-wash:#1A1D24;
+      --bg:#0D1420;
+      --bg-deep:#080D16;
+      --card:#151D2B;
+      --card-2:#1B2432;
+      --line:#293345;
+      --line-soft:#1E2735;
+      --text:#E6E8EC;
+      --muted:#97A1B0;
+      --warn:#FF9184;
+      --warnbg:#231619;
+      --warnline:#452A28;
+      --amber:#E0A44A;
+      --brand-rgb:143,179,232;
+      --accent-rgb:214,178,106;
+      --shade-rgb:0,0,0;
+      --on-accent:#0D1420;
+      --on-brand:#0D1420;
+      --bar:#1D2A43;
+      --bar-2:#111A2B;
+      --on-bar:#CFDFF7;
+      --on-bar-dim:rgba(207,223,247,.72);
+      --pill-bg:#8FB3E8;
+      --pill-fg:#0D1420;
+      --cool:#1D2A43;
+      --cool-2:#111A2B;
+      --on-cool:#CFDFF7;
+    }
+  }
+
   *{box-sizing:border-box;}
-  body{margin:0;font-family:"Noto Sans TC",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+  html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h);-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;} *{animation-duration:.01ms !important;transition-duration:.01ms !important;}}
+  body{
+    margin:0;font-family:var(--sans);font-weight:400;
+    background:var(--bg);color:var(--text);line-height:1.68;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    background-image:radial-gradient(1200px 500px at 50% -120px, rgba(var(--brand-rgb),.08), transparent 70%);
+  }
+  a{color:var(--brand);text-underline-offset:3px;text-decoration-thickness:1px;}
+  ::selection{background:var(--accent-soft);color:var(--brand-dark);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px;}
+
+  /* ============ 圖片 ============ */
   img{width:100%;height:100%;object-fit:cover;display:block;}
-  .imgbox{position:relative;overflow:hidden;background:linear-gradient(135deg,#dcd6c2,#c8bfa0);}
-  .imgbox .cap{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-size:13px;font-weight:500;}
-
-  .hero{position:relative;height:340px;}
-  .hero .imgbox{height:100%;}
-  .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,34,68,.35),rgba(19,34,68,.85));display:flex;flex-direction:column;justify-content:flex-end;padding:32px 24px;color:#fff;}
-  .hero-overlay h1{margin:0 0 6px;font-size:28px;font-weight:900;letter-spacing:.5px;}
-  .hero-overlay p{margin:0;font-size:15px;opacity:.9;}
-
-  .wrap{max-width:900px;margin:0 auto;padding:0 16px 60px;}
-
-  .alert{margin-top:-20px;position:relative;z-index:2;background:var(--warnbg);border:1px solid #eccf9a;color:var(--warn);font-weight:700;font-size:14px;padding:14px 18px;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.08);}
-
-  .navbar{position:sticky;top: 5px;z-index:10;background:var(--navy);display:flex;overflow-x:auto;gap:0;margin-top:24px;border-radius:10px;}
-  .navbar a{flex:1;text-align:center;color:#fff;text-decoration:none;padding:12px 8px;font-size:13px;font-weight:500;white-space:nowrap;border-right:1px solid rgba(255,255,255,.15);}
-  .navbar a:last-child{border-right:none;}
-  .navbar a:hover{background:var(--navy-dark);}
-  .navbar a.active{background:var(--navy-dark);border-bottom:3px solid var(--gold);}
-
-  .section-title{display:flex;align-items:center;gap:10px;margin:40px 0 16px;}
-  .section-title .badge{background:var(--navy);color:#fff;font-weight:700;font-size:13px;padding:5px 12px;border-radius:20px;}
-  .section-title h2{margin:0;font-size:20px;font-weight:700;color:var(--navy);}
-  .section-title .sub{font-size:13px;color:var(--muted);margin-left:auto;}
-
-  .day-photo{border-radius:14px;overflow:hidden;height:170px;margin-bottom:16px;}
-
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px;}
-  .card .time{flex:0 0 64px;font-weight:700;color:var(--navy);font-size:14px;padding-top:2px;}
-  .card .body{flex:1;min-width:0;}
-  .card .title{font-weight:700;font-size:15px;margin:0 0 4px;color:var(--text);}
-  .card .title .star{color:var(--gold);}
-  .card .meta{font-size:12.5px;color:var(--muted);margin:0 0 6px;display:flex;flex-wrap:wrap;gap:10px;}
-  .card .note{font-size:13px;color:#4a4a45;margin:0;}
-  .card.hl{border-left:4px solid var(--gold);background:#fffaf0;}
-
-  .food-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 28px;}
-  .food-strip .imgbox{height:100px;border-radius:10px;}
-
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px;}
-  .chip{background:#eef0e6;border:1px solid var(--line);color:#3a3a35;font-size:12.5px;padding:6px 12px;border-radius:20px;}
-  .chip.hl{background:var(--navy);color:#fff;border-color:var(--navy);font-weight:700;}
-
-  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;}
-  .info-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;}
-  .info-card h3{margin:0 0 8px;font-size:14px;color:var(--navy);}
-  .info-card p{margin:0;font-size:13px;color:#4a4a45;}
-
-  .weather-bar{display:flex;gap:12px;background:var(--navy);color:#fff;border-radius:12px;padding:16px 18px;margin-bottom:24px;flex-wrap:wrap;}
-  .weather-bar div{flex:1;min-width:130px;}
-  .weather-bar .num{font-size:20px;font-weight:900;}
-  .weather-bar .lbl{font-size:12px;opacity:.8;}
-
-  footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 0 0;}
-  @media(max-width:640px){
-    .hero{height:260px;}
-    .hero-overlay h1{font-size:22px;}
-    .food-strip{grid-template-columns:repeat(3,1fr);}
-    .info-grid{grid-template-columns:1fr;}
-    .card{flex-direction:column;gap:4px;}
-    .card .time{flex:none;}
+  .imgbox{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--bg-deep),var(--line));}
+  .imgbox::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);pointer-events:none;border-radius:inherit;}
+  .imgbox img{transition:transform 1.1s var(--ease), filter .5s ease;}
+  .imgbox:hover img{transform:scale(1.045);}
+  .imgbox .cap{
+    position:absolute;left:0;right:0;bottom:0;padding:22px 16px 11px;
+    background:linear-gradient(transparent,rgba(var(--shade-rgb),.82));
+    color:#fff;font-size:12.5px;font-weight:500;letter-spacing:.04em;z-index:1;
   }
 
-  .group-head{font-weight:700;color:var(--navy);font-size:13px;margin:22px 0 10px;padding:7px 12px;background:#eceadf;border-radius:8px;}
-  .tag{display:inline-block;font-size:11px;padding:2px 9px;border-radius:20px;background:#eef0e6;color:#3a3a35;margin-left:6px;font-weight:500;vertical-align:middle;}
-  .tag.hl{background:var(--navy);color:#fff;}
-  .tag.warn{background:#fdecea;color:var(--warn);}
-  .card.u1{border-left:4px solid var(--warn);background:#fff5f4;}
-  .card.u2{border-left:4px solid #d98324;background:#fffaf0;}
-  .check-row{display:flex;gap:12px;align-items:flex-start;width:100%;}
-  .check-box{flex:0 0 20px;height:20px;border-radius:5px;border:2px solid var(--navy);margin-top:2px;position:relative;}
-  .check-box.done{background:var(--navy);}
-  .check-box.done::after{content:'\2713';color:#fff;font-size:13px;position:absolute;left:3px;top:-2px;}
-  .photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;}
-  .photo-pair .imgbox{aspect-ratio:5/4;height:auto;border-radius:8px;}
-  .photo-pair .cap{font-size:11px;padding:6px 8px;}
-  .subnote{font-size:12px;color:var(--muted);margin:-6px 0 16px;}
-  details.accordion{margin:16px 0 0;}
-  details.accordion summary{list-style:none;font-weight:700;color:var(--navy);font-size:13px;padding:7px 12px;background:#eceadf;border-radius:8px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;}
+  /* ============ Hero ============ */
+  .hero{position:relative;height:clamp(360px,52vh,460px);}
+  .hero .imgbox{height:100%;}
+  .hero .imgbox::after{display:none;}
+  .hero .imgbox img{filter:saturate(.92) contrast(1.04);}
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:
+      radial-gradient(120% 80% at 50% 0%, rgba(var(--shade-rgb),.15), transparent 60%),
+      linear-gradient(180deg,rgba(var(--shade-rgb),.35) 0%,rgba(var(--shade-rgb),.6) 45%,rgba(var(--shade-rgb),.93) 100%);
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:36px 24px 44px;color:#fff;
+  }
+  .hero-overlay > *{max-width:900px;width:100%;margin-inline:auto;}
+  .hero-overlay::before{
+    content:'SEOUL · 서울 · 2026';
+    display:block;max-width:900px;width:100%;margin:0 auto 14px;
+    font-family:var(--display);font-size:12px;font-weight:700;
+    letter-spacing:.42em;text-transform:uppercase;color:var(--accent);
+    opacity:0;animation:riseIn .9s var(--ease) .1s forwards;
+  }
+  .hero-overlay h1{
+    margin:0 0 10px;font-family:var(--serif);font-size:clamp(30px,6.2vw,46px);
+    font-weight:900;letter-spacing:.02em;line-height:1.18;
+    text-shadow:0 2px 24px rgba(0,0,0,.35);
+    opacity:0;animation:riseIn .9s var(--ease) .22s forwards;
+  }
+  .hero-overlay h1::after{
+    content:'';display:block;width:56px;height:2px;margin-top:16px;
+    background:linear-gradient(90deg,var(--accent),transparent);
+  }
+  .hero-overlay p{
+    margin:14px 0 0;font-size:14.5px;font-weight:300;letter-spacing:.06em;
+    color:rgba(255,255,255,.88);
+    opacity:0;animation:riseIn .9s var(--ease) .34s forwards;
+  }
+  @keyframes riseIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+
+  .wrap{max-width:900px;margin:0 auto;padding:0 18px 72px;}
+
+  /* ============ 警示條 ============ */
+  .alert{
+    margin-top:-30px;position:relative;z-index:5;
+    background:var(--warnbg);border:1px solid var(--warnline);
+    color:var(--warn);font-weight:700;font-size:14px;line-height:1.7;
+    padding:16px 20px 16px 20px;border-radius:var(--r-lg);
+    box-shadow:var(--sh-3);
+    border-left:4px solid var(--warn);
+  }
+
+  /* ============ 導覽列 ============ */
+  /* 外層負責吸頂與左右漸層提示，內層負責橫向捲動 */
+  .navwrap{position:sticky;top:10px;z-index:40;margin:26px 0 6px;}
+  .navwrap::before,.navwrap::after{
+    content:'';position:absolute;top:0;bottom:0;width:48px;pointer-events:none;
+    opacity:0;transition:opacity .25s var(--ease);z-index:2;
+  }
+  .navwrap::before{left:0;border-radius:var(--r-pill) 0 0 var(--r-pill);
+    background:linear-gradient(90deg,var(--bar) 35%,transparent);}
+  .navwrap::after{right:0;border-radius:0 var(--r-pill) var(--r-pill) 0;
+    background:linear-gradient(270deg,var(--bar-2) 35%,transparent);}
+  .navwrap.more-left::before,.navwrap.more-right::after{opacity:1;}
+
+  .navbar{
+    display:flex;gap:2px;padding:5px;
+    background:linear-gradient(180deg,var(--bar),var(--bar-2));
+    border-radius:var(--r-pill);
+    overflow-x:auto;overscroll-behavior-x:contain;scroll-behavior:smooth;
+    scrollbar-width:none;-ms-overflow-style:none;
+    box-shadow:0 10px 26px -14px rgba(var(--shade-rgb),.6), inset 0 1px 0 rgba(var(--accent-rgb),.28);
+  }
+  .navbar::-webkit-scrollbar{display:none;}
+  .navbar a{
+    flex:0 0 auto;text-align:center;color:var(--on-bar-dim);text-decoration:none;
+    padding:8px 10px;font-size:12.5px;font-weight:500;white-space:nowrap;
+    border-radius:var(--r-pill);letter-spacing:0;
+    transition:background .25s var(--ease), color .25s var(--ease);
+  }
+  .navbar a:hover{background:rgba(var(--accent-rgb),.22);color:var(--on-bar);}
+  .navbar a.active{background:var(--pill-bg);color:var(--pill-fg);font-weight:700;
+    box-shadow:0 2px 8px -2px rgba(var(--shade-rgb),.45), inset 0 0 0 1px rgba(var(--accent-rgb),.35);}
+
+  /* ============ 區塊標題 ============ */
+  .section-title{
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    margin:56px 0 18px;padding-bottom:14px;scroll-margin-top:var(--nav-h);
+    border-bottom:1px solid var(--line);position:relative;
+  }
+  .section-title::after{content:'';position:absolute;left:0;bottom:-1px;width:60px;height:2px;background:var(--accent);}
+  .section-title .badge{
+    background:var(--brand);color:var(--on-brand);font-weight:700;font-size:12px;
+    padding:6px 14px;border-radius:var(--r-pill);letter-spacing:.06em;white-space:nowrap;
+    box-shadow:0 4px 12px -6px rgba(var(--brand-rgb),.55);
+  }
+  .section-title h2{margin:0;font-family:var(--serif);font-size:clamp(20px,3.4vw,25px);font-weight:700;color:var(--brand);letter-spacing:.02em;}
+  .section-title .sub{font-size:12.5px;color:var(--muted);margin-left:auto;letter-spacing:.03em;}
+
+  .day-photo{border-radius:var(--r-lg);overflow:hidden;height:clamp(170px,26vw,215px);margin-bottom:18px;box-shadow:var(--sh-2);}
+
+  /* ============ 卡片 ============ */
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);
+    padding:16px 18px;margin-bottom:10px;display:flex;gap:16px;
+    box-shadow:var(--sh-1);
+    transition:box-shadow .3s var(--ease), transform .3s var(--ease), border-color .3s var(--ease);
+  }
+  .card:hover{box-shadow:var(--sh-2);transform:translateY(-2px);border-color:var(--line-soft);}
+  .card .time{
+    flex:0 0 96px;font-weight:700;color:var(--brand);font-size:13.5px;
+    padding-top:2px;font-variant-numeric:tabular-nums;letter-spacing:.01em;
+  }
+  .card .body{flex:1;min-width:0;}
+  .card .title{font-weight:700;font-size:15.5px;margin:0 0 5px;color:var(--text);line-height:1.5;letter-spacing:.01em;}
+  .card .title .star{color:var(--accent);margin-right:2px;}
+  .card .meta{font-size:12.5px;color:var(--muted);margin:0 0 7px;display:flex;flex-wrap:wrap;gap:4px 12px;line-height:1.6;}
+  .card .note{font-size:13.5px;color:var(--muted);margin:0;line-height:1.75;}
+  .card .note a{color:var(--brand);font-weight:500;}
+
+  .card.hl{border-left:3px solid var(--accent);background:var(--accent-wash);}
+  .card.u1{border-left:3px solid var(--warn);background:var(--warnbg);}
+  .card.u2{border-left:3px solid var(--amber);background:var(--accent-wash);}
+
+  /* 時間軸圓點（桌機） */
+  @media(min-width:641px){
+    .card .time{position:relative;padding-left:17px;}
+    .card .time::before{
+      content:'';position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;
+      background:var(--accent);box-shadow:0 0 0 3px var(--accent-wash);
+    }
+    .card.hl .time::before,.card.u1 .time::before,.card.u2 .time::before{box-shadow:0 0 0 3px rgba(255,255,255,.55);}
+  }
+
+  /* ============ 美食圖帶 ============ */
+  .food-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0 32px;}
+  .food-strip .imgbox{height:clamp(100px,14vw,130px);border-radius:var(--r-md);box-shadow:var(--sh-1);}
+
+  /* ============ 標籤 ============ */
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px;}
+  .chip{
+    background:var(--card-2);border:1px solid var(--line);color:var(--muted);
+    font-size:12.5px;padding:6px 13px;border-radius:var(--r-pill);letter-spacing:.02em;
+  }
+  .chip.hl{background:var(--brand);color:var(--on-brand);border-color:var(--brand);font-weight:700;}
+  .tag{
+    display:inline-block;font-size:11px;padding:2px 10px;border-radius:var(--r-pill);
+    background:var(--card-2);border:1px solid var(--line);color:var(--muted);
+    margin-left:7px;font-weight:500;vertical-align:middle;letter-spacing:.03em;
+  }
+  .tag.hl{background:var(--brand);color:var(--on-brand);border-color:var(--brand);}
+  .tag.warn{background:var(--warnbg);color:var(--warn);border-color:var(--warnline);font-weight:700;}
+
+  /* ============ 資訊卡 ============ */
+  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:30px;}
+  .info-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);
+    padding:16px 18px;box-shadow:var(--sh-1);
+    transition:box-shadow .3s var(--ease), transform .3s var(--ease);
+  }
+  .info-card:hover{box-shadow:var(--sh-2);transform:translateY(-2px);}
+  .info-card h3{margin:0 0 9px;font-size:14px;color:var(--brand);font-weight:700;letter-spacing:.02em;}
+  .info-card p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.75;}
+
+  /* ============ 天氣列 ============ */
+  .weather-bar{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
+    background:var(--line);color:var(--on-cool);border-radius:var(--r-lg);
+    padding:2px;margin-bottom:26px;overflow:hidden;box-shadow:var(--sh-2);
+  }
+  @media(max-width:760px){.weather-bar{grid-template-columns:repeat(2,1fr);}}
+  .weather-bar>div{
+    flex:1;min-width:0;padding:18px 18px;
+    background:linear-gradient(165deg,var(--cool),var(--cool-2));
+  }
+  .weather-bar>div>.num{font-size:clamp(19px,3.2vw,23px);font-weight:900;letter-spacing:.01em;font-variant-numeric:tabular-nums;line-height:1.3;}
+  .weather-bar>div>.lbl{font-size:12px;opacity:.72;letter-spacing:.05em;margin-top:2px;}
+
+  /* ============ 群組標題 / 交通 ============ */
+  .group-head{
+    font-weight:700;color:var(--brand);font-size:12.5px;letter-spacing:.04em;
+    margin:26px 0 12px;padding:9px 15px;background:var(--bg-deep);
+    border-radius:var(--r-pill);display:inline-block;border:1px solid var(--line);
+  }
+
+  /* ============ 勾選框 ============ */
+  .check-row{display:flex;gap:14px;align-items:flex-start;width:100%;}
+  .check-box{
+    flex:0 0 21px;height:21px;border-radius:6px;border:2px solid var(--brand);
+    margin-top:3px;position:relative;cursor:pointer;
+    transition:background .22s var(--ease), transform .22s var(--ease), box-shadow .22s var(--ease);
+  }
+  .check-box:hover{transform:scale(1.08);box-shadow:0 0 0 4px rgba(var(--brand-rgb),.12);}
+  .check-box.done{background:var(--brand);border-color:var(--brand);}
+  .check-box.done::after{
+    content:'';position:absolute;left:6px;top:2px;width:5px;height:10px;
+    border:solid var(--card);border-width:0 2.5px 2.5px 0;transform:rotate(43deg);
+  }
+  .check-row:has(.check-box.done) .title{opacity:.62;}
+
+  /* ============ 圖片對 ============ */
+  .photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;}
+  .photo-pair .imgbox{aspect-ratio:5/4;height:auto;border-radius:var(--r-sm);}
+  .photo-pair .cap{font-size:11px;padding:16px 9px 7px;}
+
+  .subnote{font-size:12.5px;color:var(--muted);margin:-8px 0 18px;letter-spacing:.02em;}
+
+  /* ============ 折疊區 ============ */
+  details.accordion{margin:14px 0 0;}
+  details.accordion summary{
+    list-style:none;font-weight:700;color:var(--brand);font-size:13.5px;letter-spacing:.03em;
+    padding:12px 18px;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--r-md);cursor:pointer;display:flex;justify-content:space-between;
+    align-items:center;user-select:none;box-shadow:var(--sh-1);
+    transition:background .25s var(--ease), border-color .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  details.accordion summary:hover{background:var(--card-2);border-color:var(--accent);box-shadow:var(--sh-2);}
   details.accordion summary::-webkit-details-marker{display:none;}
-  details.accordion summary::after{content:'▸';font-size:12px;transition:transform .2s;}
-  details.accordion[open] summary::after{transform:rotate(90deg);}
-  details.accordion[open] summary{border-radius:8px 8px 0 0;margin-bottom: 10px;}
+  details.accordion summary::after{
+    content:'';width:7px;height:7px;flex:0 0 auto;
+    border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);
+    transform:rotate(-45deg);margin-right:3px;
+    transition:transform .3s var(--ease);
+  }
+  details.accordion[open] summary::after{transform:rotate(45deg);}
+  details.accordion[open] summary{
+    border-radius:var(--r-md) var(--r-md) 0 0;margin-bottom:12px;
+    background:var(--bar);color:var(--on-bar);border-color:var(--bar);
+  }
+  details.accordion[open] summary::after{border-color:var(--accent);}
+  details.accordion[open] > *:not(summary){animation:fadeDown .35s var(--ease);}
+  @keyframes fadeDown{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:none;}}
   details.accordion .card-grid{margin-top:10px;}
-  .cl-group-title{font-weight:700;color:var(--navy);font-size:13px;padding:7px 12px;background:#eceadf;border-radius:8px;margin:12px 0 8px;}
-  #food details{margin:8px 0;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.07);}
-  #food details summary{font-weight:700;color:#fff;font-size:14px;padding:12px 16px 12px 14px;background:linear-gradient(135deg,var(--navy) 0%,#2c4f8c 100%);cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;user-select:none;transition:filter .15s;border-radius:12px;}
-  #food details[open]>summary{border-radius:12px 12px 0 0;}
-  #food details summary:hover{filter:brightness(1.12);}
-  #food details summary::-webkit-details-marker{display:none;}
-  #food details summary::before{content:'▶';font-size:0.6em;transition:transform 0.2s;flex-shrink:0;color:var(--gold);}
-  #food details[open] summary::before{transform:rotate(90deg);}
-  #food details .card-grid{margin:0;padding:12px 10px 6px;background:#fff;border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;}
-  .cost-table{width:100%;border-collapse:collapse;margin-bottom:16px;font-size:14px;}
-  .cost-table th,.cost-table td{padding:10px 12px;border-bottom:1px solid var(--line);}
-  .cost-table th{background:#eceadf;color:var(--navy);font-weight:700;font-size:13px;}
-  .cost-table td:last-child,.cost-table th:last-child{text-align:right;}
-  .cost-table tfoot tr:first-child td{border-top:2px solid var(--navy);font-weight:700;background:#f5f3ec;}
-  .cost-table tfoot tr:last-child td{font-weight:900;background:var(--navy);color:#fff;border-radius:0;}
-  .cost-sum{font-size:22px;font-weight:900;color:var(--navy);}
-  .card-grid{display:grid;gap:10px;margin-bottom:16px;}
+
+  .cl-group-title{
+    font-weight:700;color:var(--brand);font-size:12.5px;letter-spacing:.04em;
+    padding:9px 15px;background:var(--bg-deep);border:1px solid var(--line);
+    border-radius:var(--r-pill);margin:16px 0 10px;display:inline-block;
+  }
+
+
+  /* ============ 餐廳清單：地區分組 ============ */
+  details:not(.accordion){
+    margin:10px 0;border-radius:var(--r-md);overflow:hidden;
+    border:1px solid var(--line);background:var(--card);box-shadow:var(--sh-1);
+    transition:box-shadow .3s var(--ease), border-color .3s var(--ease);
+  }
+  details:not(.accordion):hover{box-shadow:var(--sh-2);}
+  details:not(.accordion)[open]{border-color:var(--accent);}
+  details:not(.accordion) summary{
+    font-weight:700;color:var(--brand);font-size:14px;letter-spacing:.04em;
+    padding:14px 18px;background:var(--card);cursor:pointer;list-style:none;
+    display:flex;align-items:center;gap:10px;user-select:none;
+    transition:background .25s var(--ease), color .25s var(--ease);
+  }
+  details:not(.accordion) summary::-webkit-details-marker{display:none;}
+  details:not(.accordion) summary::before{
+    content:'';width:7px;height:7px;flex:0 0 auto;
+    border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);
+    transform:rotate(-45deg) translate(-1px,-1px);
+    transition:transform .3s var(--ease);
+  }
+  details:not(.accordion)[open] summary::before{transform:rotate(45deg);}
+  details:not(.accordion) summary::after{
+    content:'';flex:1;height:1px;margin-left:4px;
+    background:linear-gradient(90deg,var(--line),transparent);
+  }
+  details:not(.accordion) summary:hover{background:var(--card-2);}
+  details:not(.accordion)[open] > summary{
+    background:var(--bar);color:var(--on-bar);
+  }
+  details:not(.accordion)[open] > summary::after{background:linear-gradient(90deg,rgba(255,255,255,.28),transparent);}
+  details:not(.accordion) .card-grid{margin:0;padding:14px 12px 12px;background:var(--card-2);}
+  details:not(.accordion) .card-grid .card{background:var(--card);}
+  details:not(.accordion) > .card{margin:0;border-radius:0;border:none;border-bottom:1px solid var(--line-soft);box-shadow:none;}
+  details:not(.accordion) > .card:hover{transform:none;background:var(--card-2);}
+  details:not(.accordion) > .card:last-child{border-bottom:none;}
+
+  /* ============ 費用表 ============ */
+  .cost-table{
+    width:100%;border-collapse:separate;border-spacing:0;margin-bottom:18px;font-size:14px;
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);
+    overflow:hidden;box-shadow:var(--sh-1);
+  }
+  .cost-table th,.cost-table td{padding:13px 16px;border-bottom:1px solid var(--line-soft);text-align:left;}
+  .cost-table th{background:var(--bg-deep);color:var(--brand);font-weight:700;font-size:12.5px;letter-spacing:.05em;}
+  .cost-table td{font-variant-numeric:tabular-nums;}
+  .cost-table tbody tr:hover td{background:var(--card-2);}
+  .cost-table td:last-child,.cost-table th:last-child{text-align:right;font-weight:500;}
+  .cost-table tfoot tr:first-child td{border-top:2px solid var(--brand);font-weight:700;background:var(--bg-deep);}
+  .cost-table tfoot tr:last-child td{font-weight:900;background:var(--bar);color:var(--on-bar);border-bottom:none;}
+  .cost-sum{font-size:clamp(20px,4vw,26px);font-weight:900;color:var(--brand);font-variant-numeric:tabular-nums;letter-spacing:-.01em;}
+
+  /* ============ 格線 ============ */
+  .card-grid{display:grid;gap:12px;margin-bottom:18px;}
   .card-grid.col3{grid-template-columns:repeat(3,1fr);}
   .card-grid.col2{grid-template-columns:repeat(2,1fr);}
   .card-grid .card{margin-bottom:0;}
-  @media(max-width:640px){.card-grid.col3{grid-template-columns:1fr 1fr;}.card-grid.col2{grid-template-columns:1fr;}.card-grid.col2-sm{grid-template-columns:1fr 1fr;}}
+
+  footer{
+    text-align:center;color:var(--muted);font-size:12px;line-height:1.9;
+    padding:40px 0 0;margin-top:48px;border-top:1px solid var(--line);letter-spacing:.02em;
+  }
+
+
+  /* ============ 色盤切換器 ============ */
+  #palette{position:fixed;left:20px;bottom:20px;z-index:50;display:flex;align-items:center;gap:8px;}
+  #palette .pbtn{
+    width:46px;height:46px;border:none;border-radius:50%;cursor:pointer;
+    background:linear-gradient(165deg,var(--bar),var(--bar-2));color:var(--on-bar);
+    box-shadow:var(--sh-2);display:grid;place-items:center;font-size:18px;flex:0 0 auto;
+  }
+  #palette .plist{
+    display:flex;gap:7px;padding:8px 10px;border-radius:var(--r-pill);
+    background:var(--card);border:1px solid var(--line);box-shadow:var(--sh-2);
+    opacity:0;visibility:hidden;transform:translateX(-10px);
+    transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s;
+  }
+  #palette.open .plist{opacity:1;visibility:visible;transform:none;}
+  #palette .sw{
+    width:26px;height:26px;border-radius:50%;cursor:pointer;flex:0 0 auto;
+    border:2px solid transparent;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);
+    transition:transform .2s var(--ease);
+  }
+  #palette .sw:hover{transform:scale(1.15);}
+  #palette .sw[aria-pressed="true"]{border-color:var(--text);transform:scale(1.1);}
+  @media(max-width:640px){#palette{left:14px;bottom:14px;}#palette .pbtn{width:42px;height:42px;}}
+  @media print{#palette{display:none !important;}}
+
+  /* ============ 回到頂端 ============ */
+  #toTop{
+    position:fixed;right:20px;bottom:20px;z-index:50;
+    width:46px;height:46px;border:none;border-radius:50%;cursor:pointer;
+    background:linear-gradient(165deg,var(--bar),var(--bar-2));color:var(--on-bar);
+    box-shadow:var(--sh-2);display:grid;place-items:center;font-size:17px;
+    opacity:0;visibility:hidden;transform:translateY(12px);
+    transition:opacity .3s var(--ease), transform .3s var(--ease), visibility .3s;
+  }
+  #toTop.show{opacity:1;visibility:visible;transform:none;}
+  #toTop:hover{background:var(--accent);color:var(--on-accent);}
+
+  /* ============ 閱讀進度 ============ */
+  #progress{
+    position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
+    background:linear-gradient(90deg,var(--accent),var(--brand-soft));
+    transition:width .08s linear;
+  }
+
+  /* ============ RWD ============ */
+  @media(max-width:640px){
+    .hero{height:clamp(300px,48vh,360px);}
+    .hero-overlay{padding:28px 18px 34px;}
+    .hero-overlay::before{letter-spacing:.3em;font-size:11px;}
+    .wrap{padding:0 14px 60px;}
+    .alert{font-size:13.5px;padding:14px 16px;}
+    .navwrap{margin:22px 0 4px;}
+    .section-title{margin:44px 0 16px;}
+    .section-title .sub{margin-left:0;flex-basis:100%;}
+    .food-strip{grid-template-columns:repeat(3,1fr);gap:8px;}
+    .info-grid{grid-template-columns:1fr;}
+    .weather-bar{grid-template-columns:repeat(2,1fr);}
+    .card{flex-direction:column;gap:6px;padding:15px 16px;}
+    .card .time{flex:none;font-size:12.5px;color:var(--brand);}
+    .card:hover{transform:none;}
+    .card-grid.col3{grid-template-columns:1fr 1fr;}
+    .card-grid.col2{grid-template-columns:1fr;}
+    .card-grid.col2-sm{grid-template-columns:1fr 1fr;}
+    .cost-table th,.cost-table td{padding:11px 12px;font-size:13px;}
+    #toTop{right:14px;bottom:14px;width:42px;height:42px;}
+  }
+
+  /* ============ 列印 ============ */
+  @media print{
+    body{background:#fff;}
+    .navwrap,#toTop,#progress,.hero,.food-strip,.day-photo,.photo-pair{display:none !important;}
+    .wrap{max-width:100%;padding:0;}
+    .card,.info-card,.cost-table,details.accordion summary{box-shadow:none !important;break-inside:avoid;}
+    details.accordion summary{background:#eee !important;color:#000 !important;}
+    .section-title{break-after:avoid;}
+    a{text-decoration:none;color:#000;}
+  }
 </style>
 </head>
 <body>
+<div id="progress"></div>
 
 <div class="hero">
   <div class="imgbox">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Evening%20street%20in%20Seongsu-dong.jpg"
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Evening%20street%20in%20Seongsu-dong.jpg?width=1400"
          alt="聖水洞街景" loading="lazy"
          onerror="this.onerror=null;this.style.display='none';">
   </div>
@@ -139,6 +1023,7 @@
 
   <div class="alert">★ 注意：10/9（五）為韓國諺文日，10/9–10/11 為三天連假。夜店爆滿、住宿漲價、部分小店可能休息。</div>
 
+  <div class="navwrap">
   <div class="navbar">
     <a href="#checklist">Checklist</a>
     <a href="#weather">天氣</a>
@@ -152,6 +1037,7 @@
     <a href="#info">實用資訊</a>
     <a href="#cost">花費</a>
   </div>
+  </div>
 
   <div id="checklist" class="section-title"><span class="badge">Checklist</span><h2>行前準備清單</h2></div>
   <div class="subnote">★★★ 最急的三項請今天就處理 · 打勾框表示已完成</div>
@@ -159,7 +1045,7 @@
   <details class="accordion">
   <summary>■ 要執行的</summary>
   <div class="card-grid col2">
-  <div class="card"><div class="body"><div class="check-row"><div class="check-box done"></div><div><p class="title">訂住宿<span class="tag">✓ 已完成</span></p><p class="note">弘大入口站步行1秒 · 高層 City View · 28,049 TWD · <a href="https://www.airbnb.com.tw/rooms/1650486548065619117?unique_share_id=8bd3c392-6ea2-452c-89cb-17be51a0e089&viralityEntryPoint=1&s=76" target="_blank" style="color:var(--navy);">查看訂單</a></p></div></div></div></div>
+  <div class="card"><div class="body"><div class="check-row"><div class="check-box done"></div><div><p class="title">訂住宿<span class="tag">✓ 已完成</span></p><p class="note">弘大入口站步行1秒 · 高層 City View · 28,049 TWD · <a href="https://www.airbnb.com.tw/rooms/1650486548065619117?unique_share_id=8bd3c392-6ea2-452c-89cb-17be51a0e089&viralityEntryPoint=1&s=76" target="_blank" style="color:var(--brand);">查看訂單</a></p></div></div></div></div>
   <div class="card"><div class="body"><div class="check-row"><div class="check-box done"></div><div><p class="title">訂機票<span class="tag">✓ 已完成</span></p><p class="note">去程 TR872 10/6 18:10 TPE T1 → 22:10 ICN T1 · 回程 TR873 10/10 23:00 ICN T1 → 10/11 00:35 TPE T1 · Scoot B787-8 經濟艙</p></div></div></div></div>
   <div class="card"><div class="body"><div class="check-row"><div class="check-box done"></div><div><p class="title">辦旅遊保險<span class="tag">✓ 已完成</span></p><p class="note">富邦產險 · 快樂旅平卡（個人暨家庭型）· 保險顧問：林琍羚</p></div></div></div></div>
   <div class="card u1"><div class="body"><div class="check-row"><div class="check-box"></div><div><p class="title">填 e-Arrival Card (起飛前3天內完成)（不是選配！）<span class="tag warn">★★★ 必做</span></p><p class="note">紙本入境卡2026/1/1已廢除，現在強制線上申報。抵達前72小時內填 www.e-arrivalcard.go.kr</p></div></div></div></div>
@@ -247,19 +1133,19 @@
 
   <div id="d1" class="section-title"><span class="badge">10/6 (二)</span><h2>抵達首爾</h2><span class="sub">仁川機場 → 弘大</span></div>
   <div class="day-photo imgbox">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Incheon%20International%20Airport%20Terminal%201%20Departure.jpg"
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Incheon%20International%20Airport%20Terminal%201%20Departure.jpg?width=1400"
          alt="仁川國際機場" loading="lazy" onerror="this.onerror=null;this.style.display='none';">
     <div class="cap">仁川國際機場 第一航廈</div>
   </div>
   <div class="card"><div class="time">18:10</div><div class="body"><p class="title">TR872 桃園 T1 起飛</p><p class="meta">酷航 B787-8 · 飛行 2小時35分</p></div></div>
   <div class="card"><div class="time">22:10</div><div class="body"><p class="title">抵達仁川 T1</p><p class="meta">出關 · 領行李 · 入境約 60 分</p></div></div>
   <div class="card"><div class="time">23:23</div><div class="body"><p class="title">T1 3F 叫 Jumbo Taxi / Kakao T Venti 進市區</p><p class="meta">점보택시 · T1 3F 出發</p><p class="note">到弘大約 8–9 萬韓元，5人分攤最划算。車程約 62 分。機場巴士與直通列車已收班。</p></div></div>
-  <div class="card"><div class="time">01:25 (+1)</div><div class="body"><p class="title">抵達住宿 · Check in</p><p class="meta">교촌치킨 / bhc 宵夜</p><p class="note">第一晚暖身就好。· <a href="https://www.airbnb.com.tw/rooms/1650486548065619117?unique_share_id=8bd3c392-6ea2-452c-89cb-17be51a0e089&viralityEntryPoint=1&s=76" target="_blank" style="color:var(--navy);">Airbnb 訂單</a></p></div></div>
+  <div class="card"><div class="time">01:25 (+1)</div><div class="body"><p class="title">抵達住宿 · Check in</p><p class="meta">교촌치킨 / bhc 宵夜</p><p class="note">第一晚暖身就好。· <a href="https://www.airbnb.com.tw/rooms/1650486548065619117?unique_share_id=8bd3c392-6ea2-452c-89cb-17be51a0e089&viralityEntryPoint=1&s=76" target="_blank" style="color:var(--brand);">Airbnb 訂單</a></p></div></div>
 
   <div id="d2" class="section-title"><span class="badge">10/7 (三)</span><h2>明洞 → 漢南洞</h2><span class="sub">★漢南 6 家品牌</span></div>
   <div class="card"><div class="time">09:30</div><div class="body"><p class="title">民宿出發</p><p class="meta">從民宿出門</p></div></div>
   <div class="day-photo imgbox">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Seoul-Myeongdong-02.jpg"
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Seoul-Myeongdong-02.jpg?width=1400"
          alt="明洞商圈" loading="lazy" onerror="this.onerror=null;this.style.display='none';">
     <div class="cap">明洞商圈</div>
   </div>
@@ -279,14 +1165,14 @@
   <div class="card"><div class="time">21:00</div><div class="body"><p class="title">梨泰院夜店</p><p class="meta">Fountain / Cakeshop / Soap · 多數免入場費</p></div></div>
 
   <div class="food-strip">
-    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Myeong%20Ryun%20Jinsa%20Galbi6.jpg" alt="韓式烤肉" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
-    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Korean%20seafood-Ganjang%20gejang-01.jpg" alt="醬蟹" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
-    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Itaewon%202.jpg" alt="梨泰院街景" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
+    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Myeong%20Ryun%20Jinsa%20Galbi6.jpg?width=1400" alt="韓式烤肉" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
+    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Korean%20seafood-Ganjang%20gejang-01.jpg?width=1400" alt="醬蟹" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
+    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Itaewon%202.jpg?width=1400" alt="梨泰院街景" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
   </div>
 
   <div id="d3" class="section-title"><span class="badge">10/8 (四)</span><h2>弘大 → 汝矣島 / 延南</h2><span class="sub">★夜店主場</span></div>
   <div class="day-photo imgbox">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hongdae%20Party%20District%20at%20Night%2C%20Seoul.jpg"
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hongdae%20Party%20District%20at%20Night%2C%20Seoul.jpg?width=1400"
          alt="弘大夜景" loading="lazy" onerror="this.onerror=null;this.style.display='none';">
     <div class="cap">弘大夜生活區</div>
   </div>
@@ -302,7 +1188,7 @@
   <div class="card"><div class="time">10:30</div><div class="body"><p class="title">民宿出發</p><p class="meta">從民宿出門</p></div></div>
   <div class="group-head">🚇 地鐵 22–25 分</div>
   <div class="day-photo imgbox">
-    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Street%20hongdae%20Seoul.jpg"
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Street%20hongdae%20Seoul.jpg?width=1400"
          alt="首爾潮流街區" loading="lazy" onerror="this.onerror=null;this.style.display='none';">
     <div class="cap">聖水洞 · 首爾的布魯克林</div>
   </div>
@@ -317,9 +1203,9 @@
   <div class="card"><div class="time">21:30</div><div class="body"><p class="title">梨泰院夜店</p><p class="meta">Fountain / Cakeshop / Soap · 多數免入場費</p></div></div>
 
   <div class="food-strip">
-    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tteokbokki.JPG" alt="辣炒年糕" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
-    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gwangjang%20Market.JPG" alt="市場" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
-    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dongdaemun%20Design%20Plaza%20at%20night%2C%20Seoul%2C%20Korea.jpg" alt="東大門" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
+    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tteokbokki.JPG?width=1400" alt="辣炒年糕" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
+    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gwangjang%20Market.JPG?width=1400" alt="市場" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
+    <div class="imgbox"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dongdaemun%20Design%20Plaza%20at%20night%2C%20Seoul%2C%20Korea.jpg?width=1400" alt="東大門" loading="lazy" onerror="this.onerror=null;this.style.display='none';"></div>
   </div>
 
   <div id="d5" class="section-title"><span class="badge">10/10 (六)</span><h2>新堂 → 東大門 → 仁川機場</h2><span class="sub">回程日</span></div>
@@ -520,16 +1406,130 @@
 (function(){
   var links = document.querySelectorAll('.navbar a[href^="#"]');
   var ids = Array.from(links).map(function(a){ return a.getAttribute('href').slice(1); });
+  var bar = document.querySelector('.navbar');
+  var wrap = document.querySelector('.navwrap');
+
+  /* 左右還有內容時顯示漸層提示 */
+  function hints(){
+    if(!bar || !wrap) return;
+    var max = bar.scrollWidth - bar.clientWidth;
+    wrap.classList.toggle('more-left',  bar.scrollLeft > 4);
+    wrap.classList.toggle('more-right', bar.scrollLeft < max - 4);
+  }
+  if(bar){
+    bar.addEventListener('scroll', hints, {passive:true});
+    window.addEventListener('resize', hints);
+    hints();
+    /* 滑鼠滾輪也能橫向捲動這條列 */
+    bar.addEventListener('wheel', function(e){
+      if(Math.abs(e.deltaY) > Math.abs(e.deltaX) && bar.scrollWidth > bar.clientWidth){
+        bar.scrollLeft += e.deltaY; e.preventDefault();
+      }
+    }, {passive:false});
+  }
+
+  /* 讓目前所在的按鈕自動捲進視野 */
+  function reveal(a){
+    if(!bar || bar.scrollWidth <= bar.clientWidth) return;
+    var l = a.offsetLeft, r = l + a.offsetWidth;
+    if(l < bar.scrollLeft + 48) bar.scrollLeft = Math.max(0, l - 48);
+    else if(r > bar.scrollLeft + bar.clientWidth - 48) bar.scrollLeft = r - bar.clientWidth + 48;
+  }
+
   var observer = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(entry.isIntersecting){
         links.forEach(function(a){
-          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+          var on = a.getAttribute('href') === '#' + entry.target.id;
+          a.classList.toggle('active', on);
+          if(on) reveal(a);
         });
       }
     });
   }, {rootMargin:'-10% 0px -80% 0px', threshold:0});
   ids.forEach(function(id){ var el=document.getElementById(id); if(el) observer.observe(el); });
+})();
+</script>
+
+<button id="toTop" aria-label="回到頂端">&#8593;</button>
+<script>
+(function(){
+  var KEY='seoul-trip-checks', saved={};
+  try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){}
+  document.querySelectorAll('.check-box').forEach(function(box,i){
+    var row=box.closest('.check-row'), t=row?row.querySelector('.title'):null;
+    var id=(t?t.textContent.trim().slice(0,40):'')+'#'+i;
+    if(saved[id]===true) box.classList.add('done');
+    else if(saved[id]===false) box.classList.remove('done');
+    box.setAttribute('role','checkbox');
+    box.setAttribute('tabindex','0');
+    box.setAttribute('aria-checked', box.classList.contains('done'));
+    function toggle(){
+      box.classList.toggle('done');
+      var on=box.classList.contains('done');
+      box.setAttribute('aria-checked', on);
+      saved[id]=on;
+      try{ localStorage.setItem(KEY, JSON.stringify(saved)); }catch(e){}
+    }
+    box.addEventListener('click', toggle);
+    box.addEventListener('keydown', function(e){
+      if(e.key===' '||e.key==='Enter'){ e.preventDefault(); toggle(); }
+    });
+  });
+
+  var bar=document.getElementById('progress'), btn=document.getElementById('toTop');
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-window.innerHeight, y=window.scrollY||0;
+    if(bar) bar.style.width=(h>0?(y/h*100):0)+'%';
+    if(btn) btn.classList.toggle('show', y>600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  onScroll();
+  if(btn) btn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+
+  var accs=document.querySelectorAll('details'), memo=[];
+  window.addEventListener('beforeprint', function(){
+    memo=[]; accs.forEach(function(d,i){ memo[i]=d.open; d.open=true; });
+  });
+  window.addEventListener('afterprint', function(){
+    accs.forEach(function(d,i){ d.open=memo[i]; });
+  });
+})();
+</script>
+
+<div id="palette">
+  <button class="pbtn" aria-label="切換色盤" aria-expanded="false">&#127912;</button>
+  <div class="plist"><button class="sw" data-p="blush" title="粉霧" aria-label="粉霧" style="background:#C8839C"></button><button class="sw" data-p="greige" title="奶杏" aria-label="奶杏" style="background:#C4A79A"></button><button class="sw" data-p="teal" title="青珊瑚" aria-label="青珊瑚" style="background:#1F5661"></button><button class="sw" data-p="autumn" title="秋楓" aria-label="秋楓" style="background:#9C3D2E"></button><button class="sw" data-p="mist" title="霧灰藍" aria-label="霧灰藍" style="background:#42566B"></button><button class="sw" data-p="pine" title="松墨綠" aria-label="松墨綠" style="background:#2F4F45"></button><button class="sw" data-p="milktea" title="奶茶棕" aria-label="奶茶棕" style="background:#6B5344"></button><button class="sw" data-p="navy" title="原深藍" aria-label="原深藍" style="background:#1F3864"></button></div>
+</div>
+<script>
+(function(){
+  var NAMES={"blush":"粉霧", "greige":"奶杏", "teal":"青珊瑚", "autumn":"秋楓", "mist":"霧灰藍", "pine":"松墨綠", "milktea":"奶茶棕", "navy":"原深藍"};
+  var KEY='seoul-trip-palette', DEFAULT='blush';
+  var root=document.documentElement;
+  var box=document.getElementById('palette');
+  var btn=box.querySelector('.pbtn');
+  var sws=box.querySelectorAll('.sw');
+  function apply(k){
+    if(!NAMES[k]) k=DEFAULT;
+    root.setAttribute('data-palette',k);
+    sws.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.p===k); });
+    var m=document.querySelector('meta[name="theme-color"][media*="light"]');
+    var probe=getComputedStyle(root).getPropertyValue('--bar').trim();
+    if(m&&probe) m.setAttribute('content',probe);
+    try{ localStorage.setItem(KEY,k); }catch(e){}
+  }
+  var saved=DEFAULT;
+  try{ saved=localStorage.getItem(KEY)||DEFAULT; }catch(e){}
+  apply(saved);
+  btn.addEventListener('click',function(){
+    var on=box.classList.toggle('open');
+    btn.setAttribute('aria-expanded',on);
+  });
+  sws.forEach(function(b){ b.addEventListener('click',function(){ apply(b.dataset.p); }); });
+  document.addEventListener('click',function(e){
+    if(!box.contains(e.target)) box.classList.remove('open');
+  });
 })();
 </script>
 </body>

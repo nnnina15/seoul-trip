@@ -1061,7 +1061,6 @@
   <div class="card "><div class="body"><div class="check-row"><div class="check-box"></div><div><p class="title">查聖水快閃店行程<span class="tag">★ 一般</span></p><p class="note">팝가 popga.co.kr 或 더위클리，查10/9聖水有什麼pop-up</p></div></div></div></div>
   <div class="card "><div class="body"><div class="check-row"><div class="check-box"></div><div><p class="title">入境時可順便登記 SES（這趟入境仍需照走）<span class="tag">★ 加分</span></p><p class="note">第一次辦是現場走人工通道、登記後才對「下一趟」入境生效，這趟入境還是要照樣填 e-Arrival Card，不會因為登記 SES 就免填</p></div></div></div></div>
   <div class="card "><div class="body"><div class="check-row"><div class="check-box"></div><div><p class="title">辦 SMARTPASS（回程出境用）<span class="tag">★ 加分</span></p><p class="note">下載 App「ICN SmartPass」，出發前先建好基本資料即可，實際登記在回程出境當天用登機證資訊完成，沒有60天的限制。回程連假機場很擠，這個能省下不少排隊時間</p></div></div></div></div>
-  <div class="card "><div class="body"><div class="check-row"><div class="check-box"></div><div><p class="title">查藥品是否可入境「如要帶藥就必須注意」<span class="tag">★ 一般</span></p><p class="note">韓國有管制藥物。要帶藥先查成分，帶原包裝或處方箋。<br>❌ 不要帶：EVE、大正百保能、普拿疼 、減重藥、散裝中藥粉 、任何散裝&分裝&沒標示的藥<br>✅ 可帶，但保留原包裝：商業密封中藥粉（建議附英文處方）、 新表飛鳴（不可分裝）、Wakamoto（不可分裝）</p></div></div></div></div>
   </div>
   </details>
 
@@ -1547,6 +1546,10 @@
   document.querySelectorAll('.check-box').forEach(function(box,i){
     var row=box.closest('.check-row'), t=row?row.querySelector('.title'):null;
     var id=(t?t.textContent.trim().slice(0,40):'')+'#'+i;
+    if(!(id in saved)){
+      var pre=id.slice(0,id.lastIndexOf('#')+1);
+      for(var k in saved){ if(k.indexOf(pre)===0){ saved[id]=saved[k]; break; } }
+    }
     if(saved[id]===true) box.classList.add('done');
     else if(saved[id]===false) box.classList.remove('done');
     box.setAttribute('role','checkbox');
